@@ -1,0 +1,37 @@
+.button_container {
+width: 250px;
+margin: 0 auto;
+padding: 5px;
+}    
+	
+.common {
+width: 250px;
+margin: 0 auto;
+text-align:center;
+padding:5px;
+border: 2px solid mediumturquoise;	 
+border-radius: 2px;
+background: #eeeeee; 
+}
+	  	
+.button{
+height: 30px;
+width: 30px;
+margin: 0 auto;
+border: 1px solid mediumturquoise;
+background-color: whitesmoke;
+}
+
+input {
+    padding: 6px;
+	margin: 5px;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1;
+	background-color: white;
+    color: darkcyan;
+    text-align: center;
+    border: 1px solid mediumturquoise;
+    border-radius: 2px;
+  }
+  

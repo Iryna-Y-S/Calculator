@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+    <head>
+	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Calculator</title>
+		<link rel = "stylesheet" type = "text/css" href = "calculator-style.css" />
+	    <script type = "text/javascript" src = "CalculatorModel.js"></script>
+		<script type = "text/javascript" src = "CalculatorController.js"></script>
+		
+		<script type = "text/javascript" src = "main.js"></script>
+    </head>
+    <body>
+	<div class="common">
+	    <div class = "operand_container">
+		    <input id = "operand1" />
+		    <input id = "operand2" />
+        </div>
+		
+       	<div class = "button_container">
+		    <input type = "button" id = "addition" class = "button" value ="+" />
+			<input type = "button" id = "subtraction" class = "button" value = "-" />
+			<input type = "button" id = "multiplication" class = "button" value = "*" />
+			<input type = "button" id = "division" class = "button" value = "/" />	
+        </div>	
+		
+        <div class = "result_container">
+		    <input id = "result" readonly = "true" />
+		</div>
+	</div>
+    </body>
+</html>
