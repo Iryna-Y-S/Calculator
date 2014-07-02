@@ -1,5 +1,3 @@
-window.addEventListener("load", calculator, false);
-
-function calculator () {
+$(function () {
     var controller = new CalculatorController();
-}
+});

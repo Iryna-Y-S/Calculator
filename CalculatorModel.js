@@ -1,55 +1,26 @@
 function Calculator() {
 
-    var ajax = getAjax();
-	
-	function getAjax () {
-	    if (window.XMLHttpRequest) {
-	        ajax = new XMLHttpRequest();
-	    } else {
-	        ajax = new ActiveXObject("Microsoft.XMLHTTP");
-	    }	
-	    return ajax;
-    }
-	
+    var facade = new Facade();
+        
     this.add = function (operand1, operand2, showResponse) {
-	    ajax.onreadystatechange = function () {
-		    if (ajax.readyState === 4 && ajax.status === 200) {
-			    showResponse(ajax.responseText);			
-	        }
-		}	
-	    ajax.open("GET", "add.php?operand1="+operand1+"&operand2="+operand2, true);
-		ajax.send(null);
+	
+        facade.action(operand1, operand2, "add", showResponse);
 	};	
 	
-    this.subtract = function (operand1, operand2, showResponse) {
-	    ajax.onreadystatechange = function () {
-		    if (ajax.readyState === 4 && ajax.status === 200) {
-			    showResponse(ajax.responseText);						
-	        }
-		}	
-	    ajax.open("GET", "sub.php?operand1=" + operand1 + "&operand2=" + operand2, true);
-		ajax.send(null);
-    };		
+	  this.subtract = function (operand1, operand2, showResponse) {
 	
-	this.multiply = function (operand1, operand2, showResponse) {
-	    ajax.onreadystatechange = function () {
-		    if (ajax.readyState === 4 && ajax.status === 200) {
-			    showResponse(ajax.responseText);						
-	        }
-		}	
-	    ajax.open("GET", "mul.php?operand1=" + operand1 + "&operand2=" + operand2, true);		
-		ajax.send(null);
+        facade.action(operand1, operand2, "subtract", showResponse);
 	};	
 	
-	this.divide = function (operand1, operand2, showResponse) { 
-	    ajax.onreadystatechange = function () {
-		    if (ajax.readyState === 4 && ajax.status === 200) {
-			    showResponse(ajax.responseText);						
-	        }
-		}	
-	    ajax.open("GET", "div.php?operand1=" + operand1 + "&operand2=" + operand2, true);
-	   	ajax.send(null);
+	  this.multiply = function (operand1, operand2, showResponse) {
+	
+        facade.action(operand1, operand2, "multiply", showResponse);
 	};	
-    
+	
+	  this.divide = function (operand1, operand2, showResponse) {
+	
+        facade.action(operand1, operand2, "divide", showResponse);
+	};	
+	    
 	return this;	
 }
